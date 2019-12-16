@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="my" class="clock"></div>
+    <script>
+        function show(){
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            
+            var time= h+ ":" + m + ":" + s;
+            document.getElementById("my").innerText = time;
+            document.getElementById("my").textContent = time;
+            setTimeout(show,1000);
+        }
+
+        show();
+
+
+    </script>
+</body>
+</html>
